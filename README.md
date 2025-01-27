@@ -1,4 +1,5 @@
 # sfatechapp
+This is a single page application built with Vue.js and Bootstrap.
 
 ## Project setup
 ```
