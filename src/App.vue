@@ -1,14 +1,17 @@
 <template>
   <NavBar />
+  <AppFooter />
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar,
+    AppFooter
   }
 }
 </script>

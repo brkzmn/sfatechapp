@@ -1,6 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg custom-navbar">
-    <a class="navbar-brand" href="#">SFA TECH</a>
+    <a class="navbar-brand" href="#">
+      <img src="@/assets/logo.png" alt="Company Logo" class="navbar-logo" />
+    </a>
     <!-- Navbar Toggler -->
     <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,7 +18,7 @@
           <a class="nav-link" href="#">Diensten</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#appfooter">Contact</a>
         </li>
       </ul>
     </div>
@@ -55,6 +57,11 @@ export default {
 
 .custom-navbar .nav-link:hover {
   color: #333 !important; /* Optional: Change text color slightly on hover */
+}
+
+.navbar-logo {
+  height: 10vh; /* Set logo height relative to navbar */
+  width: auto; /* Maintain aspect ratio */
 }
 
 </style>
