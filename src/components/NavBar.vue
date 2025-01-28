@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg custom-navbar">
+  <nav class="navbar  fixed-top navbar-expand-lg custom-navbar">
     <a class="navbar-brand" href="#">
       <img src="@/assets/logo.png" alt="Company Logo" class="navbar-logo" />
     </a>
