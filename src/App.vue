@@ -1,19 +1,20 @@
 <template>
   <NavBar />
   <CarouselComponent />
+  <AppFooter />
 </template>
+
 
 <script>
 import CarouselComponent from './components/CarouselComponent.vue';
 import NavBar from './components/NavBar.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
   components: {
     NavBar,
-    CarouselComponent
-
-
+    CarouselComponent,
   }
 }
 </script>
