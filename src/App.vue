@@ -1,14 +1,19 @@
 <template>
   <NavBar />
+  <CarouselComponent />
 </template>
 
 <script>
+import CarouselComponent from './components/CarouselComponent.vue';
 import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar,
+    CarouselComponent
+
+
   }
 }
 </script>

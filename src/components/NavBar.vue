@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg custom-navbar">
+  <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
     <a class="navbar-brand" href="#">SFA TECH</a>
     <!-- Navbar Toggler -->
     <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
