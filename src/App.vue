@@ -15,6 +15,7 @@ export default {
   components: {
     NavBar,
     CarouselComponent,
+    AppFooter
   }
 }
 </script>
