@@ -1,6 +1,9 @@
 <template>
   <NavBar />
   <CarouselComponent />
+  <main class="custom-container container">
+    <!-- for main content with some space on larger screens -->
+  </main>
   <AppFooter />
 </template>
 

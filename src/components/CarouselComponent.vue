@@ -1,42 +1,38 @@
 <template>
-<div id="carouselExampleCaptions" class="carousel slide">
+<div id="carouselExampleDark" class="carousel carousel-dark slide custom-carousel" data-bs-ride="carousel">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  
   <div class="carousel-inner">
-    
-    <h5>First slide label</h5>
-    <p>Some representative placeholder content for the first slide.</p>
-    <div class="carousel-item active">
+    <div class="carousel-item active custom-carousel-image" data-bs-interval="10000">
       <img :src="image1Path" class="d-block w-100" alt="...">
-      <div class="custom-carousel-caption">
+      <div class="carousel-caption custom-carousel-caption d-none d-md-block rounded-3">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
-    <div class="carousel-item">
-      <img :src="image2Path" class="d-block w-100" alt="...">
-      <div class="custom-carousel-caption">
+    <div class="carousel-item custom-carousel-image" data-bs-interval="2000">
+      <img :src="image2Path" class="d-block w-100 " alt="...">
+      <div class="carousel-caption custom-carousel-caption d-none d-md-block rounded-3">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item custom-carousel-image">
       <img :src="image3Path" class="d-block w-100" alt="...">
-      <div class="custom-carousel-caption">
+      <div class="carousel-caption custom-carousel-caption d-none d-md-block rounded-3">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -62,37 +58,32 @@ export default {
   }
 }  
 </script>
+
 <style scoped>
-#carouselExampleCaptions {
-  height: 100vh; /* Set the height to 100% of the viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .custom-carousel{
+    margin-top: 5rem;
+  }
 
-.carousel-item img {
-  object-fit: cover; /* This will crop the image to cover the space without stretching */
-  height: 100%; /* Ensure the image fills the height of the carousel item */
-}
+  .custom-carousel-image{
+    max-height: 60vh;
+    object-position: center;
+  }
 
-.carousel-inner {
-  height: 100%; /* Ensure the carousel inner takes up the full height */
-}
+  .custom-carousel-caption{
+    bottom: 25%;
+  }
 
-.custom-carousel-caption {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  right: 15%;
-  transform: translate(-50%, -50%); /* Center the caption both vertically and horizontally */
-  color: white;
-  text-align: center; /* Center the text horizontally */
-  background-color: rgba(0, 0, 0, 0.5); /* Optional background for better readability */
-  padding: 2rem;
-  width: auto;
-}
-.carousel-control-prev,
-.carousel-control-next {
-  z-index: 10; /* Ensure the navigation buttons are above the images */
-}
+  .custom-carousel-caption h5 {
+    color: aliceblue;
+    font-size: 3em;
+    text-shadow: 1px 1px 2px #ffa500;
+  }
+  .custom-carousel-caption p {
+    color: aliceblue;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px #ffa500;
+    
+
+  }
+
 </style>
