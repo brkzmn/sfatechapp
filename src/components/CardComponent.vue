@@ -1,46 +1,51 @@
 <template>
-    <div class="custom-background">
-      <div class="container mt-5 my-5"> <!-- Container ekledik -->
-   <div class="row row-cols-1 row-cols-md-3 g-5">
-  <div class="col">
-    <div class="card">
-      <img :src="image1Path" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
+  <div class="custom-background">
+    <!-- Başlık kısmı -->
+    <div class="page-title text-center">
+      <h1>Main Heading for All Cards</h1>
+      <p>This is a description or subtitle for the cards.</p>
     </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img :src="image2Path" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img :src="image3Path" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-      </div>
-      </div>
-  </template>
-  
-  <script>
 
-import {ref } from "vue";
+    <div class="container mt-5 my-5"> <!-- Container ekledik -->
+      <div class="row row-cols-1 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card">
+            <img :src="image1Path" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img :src="image2Path" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img :src="image3Path" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
-  export default {
-    name: "CardComponent",
-    setup() {
+<script>
+import { ref } from "vue";
+
+export default {
+  name: "CardComponent",
+  setup() {
     // Declare image paths using `ref` to make them reactive
     const image1Path = ref(require('@/assets/images/card-1.jpg'));
     const image2Path = ref(require('@/assets/images/card-2.jpg'));
@@ -54,19 +59,34 @@ import {ref } from "vue";
       image4Path
     };
   }
-  };
-  </script>
-  
-  <style scoped>
-    .custom-background {
-        background-color: gray;
-        padding-top: 5rem;  /* Üstten boşluk */
-        padding-bottom: 5rem;  /* Alttan boşluk */
-        min-height: 100vh;  /* Tüm ekranı kaplamak için */
-    }
+};
+</script>
 
-    .container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    </style>
+<style scoped>
+.custom-background {
+  background-color: gray;
+  padding-top: 5rem;  /* Üstten boşluk */
+  padding-bottom: 5rem;  /* Alttan boşluk */
+  min-height: 100vh;  /* Tüm ekranı kaplamak için */
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.page-title {
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.page-title h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.page-title p {
+  font-size: 1.25rem;
+}
+</style>

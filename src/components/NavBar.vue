@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar  fixed-top navbar-expand-lg custom-navbar">
+  <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
     <a class="navbar-brand" href="#">
       <img src="@/assets/logo.png" alt="Company Logo" class="navbar-logo" />
     </a>
@@ -12,13 +12,19 @@
     <div :class="['collapse', 'navbar-collapse', { 'show': isNavbarOpen }]" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="visually-hidden">(current)</span></a>
+          <a class="nav-link" href="#">
+            <i class="fas fa-home me-2"></i> Home
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Diensten</a>
+          <a class="nav-link" href="#">
+            <i class="fas fa-cogs me-2"></i> Diensten
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#appfooter">Contact</a>
+          <a class="nav-link" href="#appfooter">
+            <i class="fas fa-phone-alt me-2"></i> Contact
+          </a>
         </li>
       </ul>
     </div>
@@ -38,15 +44,14 @@ export default {
     },
   },
 };
-
 </script>
 
 <style scoped>
-  .navbar {
-    padding: 1rem;
-  }
+.navbar {
+  padding: 1rem;
+}
 
-  .custom-navbar {
+.custom-navbar {
   background-color: orange !important; /* Set the navbar background color to orange */
 }
 
@@ -64,86 +69,12 @@ export default {
   width: auto; /* Maintain aspect ratio */
 }
 
+.nav-link i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover i {
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
 </style>
-
-<!-- <style scoped>
-/* You can add custom styles for your navbar here */
-  
-
-  /* Basic styling for navbar */
-  .navbar {
-    background-color: #333;
-    padding: 1rem;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-  }
-  
-  .navbar-links {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-  }
-  
-  .navbar-item {
-    margin: 0;
-  }
-  
-  .navbar-link {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-link:hover {
-    color: #ff7f50;
-  }
-  
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 0.3rem;
-    cursor: pointer;
-  }
-  
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 5px;
-  }
-  
-  /* Responsive for mobile */
-  @media (max-width: 768px) {
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      align-items: center;
-    }
-  
-    .navbar-links.active {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: flex;
-    }
-  }
-</style> -->
-  
