@@ -1,7 +1,10 @@
 <template>
   <NavBar />
   <CarouselComponent />
-  <CardComponent />
+  <main class="custom-container container">
+    <CardComponent />
+    <!-- for main content with some space on larger screens -->
+  </main>
   <AppFooter />
 </template>
 

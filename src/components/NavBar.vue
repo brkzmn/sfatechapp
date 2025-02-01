@@ -1,80 +1,63 @@
 <template>
-  <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
-    <a class="navbar-brand" href="#">
-      <img src="@/assets/logo.png" alt="Company Logo" class="navbar-logo" />
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark custom-navbar ">
+  <div class="container-fluid ">
+    <a class="navbar-brand custom-navbar-logo" href="#">
+      <img src="@/assets/logo.png" alt="Company Logo" class="" />
     </a>
-    <!-- Navbar Toggler -->
-    <button class="navbar-toggler" type="button" @click="toggleNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Navbar Collapse -->
-    <div :class="['collapse', 'navbar-collapse', { 'show': isNavbarOpen }]" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">
-            <i class="fas fa-home me-2"></i> Home
-          </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto fs-5">
+        <li class="nav-item ">
+          <a class="nav-link active rounded-3" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-cogs me-2"></i> Diensten
-          </a>
+          <a class="nav-link rounded-3" href="#">Diensten</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#appfooter">
-            <i class="fas fa-phone-alt me-2"></i> Contact
-          </a>
+          <a class="nav-link rounded-3" href="#appfooter">Contact</a>
         </li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isNavbarOpen: false, // Used for toggling navbar collapse
-    };
-  },
-  methods: {
-    toggleNavbar() {
-      this.isNavbarOpen = !this.isNavbarOpen;
-    },
-  },
-};
+<script> 
 </script>
 
 <style scoped>
-.navbar {
-  padding: 1rem;
-}
+  .custom-navbar {
+    background-color: orange !important;
+    padding: 0.5rem;
 
-.custom-navbar {
-  background-color: orange !important; /* Set the navbar background color to orange */
-}
+  }
+  .custom-navbar .nav-link {
+    color: black !important; 
+  }
 
-.custom-navbar .navbar-brand,
-.custom-navbar .nav-link {
-  color: black !important; /* Set text color to black */
+  .custom-navbar-logo {
+    height: 4rem;
+  }
+  .custom-navbar-logo img{
+    height: 4rem;
+  }
+
+  .custom-navbar-collapse{
+    display: flex;
+  }
+
+
+  .custom-navbar .nav-link {
+  transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
 .custom-navbar .nav-link:hover {
-  color: #333 !important; /* Optional: Change text color slightly on hover */
-}
+  color: orange !important; 
+  background-color: #343a40 !important; 
+  text-decoration: none; 
 
-.navbar-logo {
-  height: 10vh; /* Set logo height relative to navbar */
-  width: auto; /* Maintain aspect ratio */
-}
-
-.nav-link i {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.nav-link:hover i {
-  transform: scale(1.1); /* Slight scale effect on hover */
 }
 </style>
