@@ -1,20 +1,23 @@
 <template>
-  <NavBar />
-  <CarouselComponent />
-  <main class="custom-container">
-    <CardComponent />
-    <!-- for main content with some space on larger screens -->
-  </main>
-  <AppFooter />
+  <div id="app">
+    <NavBar />
+    <CarouselComponent />
+    <main class="custom-container">
+      <CardComponent class="spaced-component" />
+      <OperationsComponent class="spaced-component" />
+      <ExplanationComponent class="spaced-component" />
+    </main>
+    <AppFooter />
+  </div>
 </template>
 
-
 <script>
-
 import CarouselComponent from '@/components/CarouselComponent.vue';
 import NavBar from '@/components/NavBar.vue';
 import CardComponent from '@/components/CardComponent.vue';
 import AppFooter from '@/components/AppFooter.vue';
+import OperationsComponent from './components/OperationsComponent.vue';
+import ExplanationComponent from './components/ExplanationComponent.vue';
 
 export default {
   name: 'App',
@@ -22,6 +25,8 @@ export default {
     NavBar,
     CarouselComponent,
     CardComponent,
+    OperationsComponent,
+    ExplanationComponent,
     AppFooter
   }
 }
@@ -34,6 +39,29 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.custom-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.spaced-component {
+  margin-bottom: 40px; /* Add margin to increase spacing */
+}
+
+AppFooter {
+  margin-top: auto;
+  width: 100%;
 }
 </style>

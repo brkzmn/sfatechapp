@@ -6,8 +6,3 @@ html, body, #app{
     position: relative;
 }
 
-
-.custom-container{
-  min-height: 1000px;
-  width: 100%;
-}
