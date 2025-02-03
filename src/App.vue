@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <NavBar />
-    <CarouselComponent />
+    <CarouselComponent class="carousel-component" />
     <main class="custom-container">
       <CardComponent class="spaced-component" />
       <OperationsComponent class="spaced-component" />
-      <ExplanationComponent class="spaced-component" />
+      <ExplanationComponent class="spaced-component" id="explanation" />
     </main>
     <AppFooter />
   </div>
@@ -46,6 +46,10 @@ export default {
   min-height: 100vh;
 }
 
+.carousel-component {
+  margin-top: -56px; /* Adjust this value based on the height of your navbar */
+}
+
 .custom-container {
   flex: 1;
   display: flex;
@@ -57,7 +61,8 @@ export default {
 }
 
 .spaced-component {
-  margin-bottom: 40px; /* Add margin to increase spacing */
+  margin-bottom: 0; /* Remove bottom margin */
+  padding: 40px 0; /* Add padding to top and bottom */
 }
 
 AppFooter {

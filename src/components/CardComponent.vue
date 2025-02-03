@@ -60,21 +60,25 @@ export default {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 20px; /* Add padding to top and bottom */
+  background: linear-gradient(to right, #1e3a5f, #87ceeb); /* Gradient from dark blue to light blue, left to right */
+  width: 100vw; /* Ensure the background covers the full width */
+  margin-left: calc(-50vw + 50%); /* Center the background */
 }
 
 .card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: none;
+  border-radius: 16px;
   overflow: hidden;
   width: 300px;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card-image {
@@ -94,25 +98,30 @@ export default {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  font-size: 20px;
+  color: #333;
 }
 
 .card-content p {
   margin: 0;
   color: #666;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .card-content button {
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 10px 20px;
   border: none;
   background-color: #007bff;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .card-content button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 </style>
