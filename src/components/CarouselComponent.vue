@@ -9,22 +9,22 @@
     <div class="carousel-item active custom-carousel-image" data-bs-interval="10000">
       <img :src="image1Path" class="d-block w-100" alt="...">
       <div class="carousel-caption custom-carousel-caption d-none d-md-block rounded-3">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>Betrouwbare Roltrapreparaties</h5>
+        <p>Houd uw roltrappen soepel draaiend, 24/7.</p>
       </div>
     </div>
     <div class="carousel-item custom-carousel-image" data-bs-interval="2000">
       <img :src="image2Path" class="d-block w-100 " alt="...">
       <div class="carousel-caption custom-carousel-caption d-none d-md-block rounded-3">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>Deskundige Onderhoudsdiensten</h5>
+        <p>Voorkom dure storingen met onze professionele zorg.</p>
       </div>
     </div>
     <div class="carousel-item custom-carousel-image">
       <img :src="image3Path" class="d-block w-100" alt="...">
       <div class="carousel-caption custom-carousel-caption d-none d-md-block rounded-3">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>Veiligheid & Efficiëntie Eerst</h5>
+        <p>Zorg voor veilige en efficiënte roltrappen voor uw bedrijf.</p>
       </div>
     </div>
   </div>
@@ -62,11 +62,12 @@ export default {
 <style scoped>
   .custom-carousel{
     margin-top: 5rem;
+    width: 100%;
   }
 
   .custom-carousel-image{
     max-height: 60vh;
-    object-position: center;
+    height: 20%;
   }
 
   .custom-carousel-caption{
@@ -74,16 +75,26 @@ export default {
   }
 
   .custom-carousel-caption h5 {
-    color: aliceblue;
-    font-size: 3em;
-    text-shadow: 1px 1px 2px #ffa500;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px #060606;
   }
   .custom-carousel-caption p {
-    color: aliceblue;
-    font-size: 2rem;
-    text-shadow: 1px 1px 2px #ffa500;
-    
-
+    color: #fff;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px #060606;
   }
 
+  @media (min-width: 992px) {
+    .custom-carousel-image img{
+      height: 50vh;
+      object-fit:cover;
+    }
+    .custom-carousel-caption h5 {
+      font-size: 3em;
+    }
+    .custom-carousel-caption p {
+      font-size: 2rem;
+    }
+  } 
 </style>
