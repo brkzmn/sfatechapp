@@ -1,5 +1,5 @@
 <template>
-  <div class="operations">
+  <div id="operations-section" class="operations">
     <div id="storingen" class="operation-detail">
       <div class="operation-text">
         <h3>Storingen</h3>

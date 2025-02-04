@@ -13,10 +13,10 @@
             <a class="nav-link active rounded-3" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link rounded-3" href="#">Diensten</a>
+            <a class="nav-link rounded-3" href="#operations-section" @click.prevent="scrollToSection('operations-section')">Diensten</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link rounded-3" href="#" @click.prevent="scrollToSection('explanation')">About Us</a>
+            <a class="nav-link rounded-3 text-decoration-underline-hover" href="#" @click.prevent="scrollToSection('explanation')">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link rounded-3" href="#appfooter">Contact</a>
@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .custom-navbar {
-  background-color: orange !important;
+  background-color: #f4f4f4 !important;
   padding: 0.5rem;
 }
 
@@ -67,9 +67,28 @@ export default {
   transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
-.custom-navbar .nav-link:hover {
-  color: orange !important; 
-  background-color: #343a40 !important; 
-  text-decoration: none; 
+.custom-navbar .nav-link {
+  position: relative;
+  text-decoration: none;
+  color: black; 
+  transition: color 0.3s ease-in-out;
+  padding-bottom: 5px;
+}
+
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0; 
+  width: 0%;
+  height: 2px;
+  background-color: #343a40; 
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+  transform: translateX(-50%);
 }
 </style>
