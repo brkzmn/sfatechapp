@@ -52,7 +52,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 40px;
+  padding: 40px 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/images/machine.jpg') no-repeat center center;
   background-size: cover;
   width: 100%;
@@ -72,7 +72,7 @@ export default {
 
 .section:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
 }
 
 .text {
