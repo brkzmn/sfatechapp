@@ -1,5 +1,5 @@
 <template>
-  <div class="operations">
+  <div id="operations-section" class="operations">
     <div id="storingen" class="operation-detail">
       <div class="operation-text">
         <h3>Storingen</h3>
@@ -35,11 +35,10 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 40px 20px; /* Add padding to top and bottom */
+  padding: 40px 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/images/escalators.jpg') no-repeat center center;
   background-size: cover;
-  width: 100vw; /* Ensure the background covers the full width */
-  margin-left: calc(-50vw + 50%); /* Center the background */
+  width: 100%;
 }
 
 .operation-detail {
@@ -49,13 +48,12 @@ export default {
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 12px;
-  gap: 10px; /* Reduced gap between text and image */
-  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for the cards */
+  gap: 10px; 
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 100%; /* Full width for mobile */
-  max-width: 800px; /* Max width for larger screens */
-  margin: 0 auto; /* Center the detail section */
+  width: 100%; 
+  margin: 0 auto;
 }
 
 .operation-detail:hover {
@@ -66,35 +64,36 @@ export default {
 .operation-text {
   text-align: center;
   max-width: 600px;
-  color: #333; /* Darker text color for better readability */
-  padding: 0 20px; /* Add padding to the sides */
+  color: #333; 
+  padding: 0 20px; 
 }
 
 .operation-text h3 {
   font-size: 24px;
-  color: #333; /* Darker text color for better readability */
+  color: #333; 
   margin-bottom: 10px;
 }
 
 .operation-text p {
   font-size: 16px;
-  color: #333; /* Darker text color for better readability */
+  color: #333; 
   line-height: 1.6;
 }
 
 .operation-image {
   width: 100%;
-  max-width: 300px; /* Slightly smaller images */
+  max-width: 300px; 
   height: auto;
   border-radius: 12px;
   object-fit: cover;
 }
 
+
 @media (min-width: 768px) {
   .operation-detail {
     flex-direction: row;
     justify-content: space-between;
-    gap: 20px; /* Further reduced gap between text and image for larger screens */
+    gap: 20px; 
   }
 
   .operation-text {
@@ -102,7 +101,13 @@ export default {
   }
 
   .operation-image {
-    width: 40%; /* Adjusted width for larger screens */
+    width: 40%; 
   }
 }
+
+@media (min-width: 992px) {
+  .operation-detail {
+    width: 60%;
+  }
+} 
 </style>

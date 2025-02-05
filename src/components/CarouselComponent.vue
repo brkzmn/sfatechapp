@@ -1,6 +1,6 @@
 <template>
 <div id="carouselExampleDark" class="carousel carousel-dark slide custom-carousel" data-bs-ride="carousel">
-  <div class="carousel-indicators">
+  <div class="carousel-indicators custom-carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -97,4 +97,12 @@ export default {
       font-size: 2rem;
     }
   } 
+  .carousel-dark .carousel-indicators [data-bs-target]{
+    background-color: #fff !important;
+  }  
+
+  .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1%) !important;
+    }
 </style>
