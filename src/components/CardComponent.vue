@@ -60,10 +60,9 @@ export default {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  padding: 40px 20px; /* Add padding to top and bottom */
-  background: linear-gradient(to right, #1e3a5f, #87ceeb); /* Gradient from dark blue to light blue, left to right */
-  width: 100vw; /* Ensure the background covers the full width */
-  margin-left: calc(-50vw + 50%); /* Center the background */
+  padding: 40px 20px; 
+  background: linear-gradient(to right, #1e3a5f, #87ceeb);
+  width: 100%;
 }
 
 .card {

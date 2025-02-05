@@ -9,7 +9,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ms-auto fs-5">
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link active rounded-3" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
@@ -45,10 +45,20 @@ export default {
 .custom-navbar {
   background-color: #f4f4f4 !important;
   padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.custom-navbar .nav-item {
+  color: black !important; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .custom-navbar .nav-link {
   color: black !important; 
+  /* width:max-content; */
 }
 
 .custom-navbar-logo {
@@ -90,5 +100,9 @@ export default {
 .custom-navbar .nav-link:hover::after {
   width: 100%;
   transform: translateX(-50%);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
 }
 </style>

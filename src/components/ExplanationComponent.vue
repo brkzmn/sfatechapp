@@ -55,8 +55,7 @@ export default {
   padding: 40px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/images/machine.jpg') no-repeat center center;
   background-size: cover;
-  width: 100vw; /* Ensure the background covers the full width */
-  margin-left: calc(-50vw + 50%); /* Center the background */
+  width: 100%;
 }
 
 .section {
@@ -79,18 +78,18 @@ export default {
 .text {
   text-align: center;
   max-width: 600px;
-  color: #fff; /* Changed to white for better readability */
+  color: #fff;
 }
 
 .text h2 {
   font-size: 24px;
-  color: #fff; /* Changed to white for better readability */
+  color: #fff; 
   margin-bottom: 10px;
 }
 
 .text p {
   font-size: 16px;
-  color: #fff; /* Changed to white for better readability */
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -102,10 +101,17 @@ export default {
   object-fit: cover;
 }
 
+@media (min-width: 992px) {
+  .section {
+    width: 50%;
+    align-items: center !important;
+  }
+} 
+
 @media (min-width: 768px) {
   .section {
     flex-direction: row;
-    justify-content: space-between; /* Align items to the edges */
+    justify-content: space-between;
   }
 
   .section:nth-child(even) {
@@ -122,4 +128,14 @@ export default {
     flex: 1; /* Allow image to take available space */
   }
 }
+
+@media (min-width: 992px) {
+  .section {
+    width: 60%;
+  }
+  .explanation{
+    align-items: center;
+  }
+} 
+
 </style>
